@@ -35,6 +35,14 @@
 	},
 	"bundle": {
 		"createUpdaterArtifacts": true,
+		"fileAssociations": [
+			{
+				"ext": ["kunkun"],
+				"mimeType": "text/plain",
+				"description": "Used to install Kunkun Extensions with a installer file",
+				"role": "Viewer"
+			}
+		],
 		"active": true,
 		"targets": "all",
 		"icon": [
@@ -49,6 +57,21 @@
 		"updater": {
 			"endpoints": ["https://updater.kunkun.sh"],
 			"pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDc1NENCRjZFM0JBOEQ0ODMKUldTRDFLZzdicjlNZFhHS0ZKYk13WkdZUTFUM01LNjkvVW5Bb2x1SnB1R0crbFRuMnlRSlJ0STgK"
+		},
+		"deep-link": {
+			"desktop": {
+				"schemes": ["kunkun"]
+			}
+		},
+		"cli": {
+			"description": "Kunkun CLI",
+			"args": [
+				{
+					"short": "v",
+					"name": "verbose",
+					"description": "Verbosity level"
+				}
+			]
 		}
 	}
 }
